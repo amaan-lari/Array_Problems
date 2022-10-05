@@ -1,0 +1,24 @@
+#include <iostream>
+#include <algorithm> // this header file have sort in it. line 10
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s1 = "dkabsgjvaflGVSDLAJBF";
+
+    sort(s1.begin(), s1.end());
+
+    cout << s1 << endl;
+    transform(s1.begin(), s1.end(), s1.begin(), ::toupper); // transform lowwer case string to  upper case
+   
+    cout << s1 << endl;
+
+    transform(s1.begin(), s1.end(), s1.begin(), ::tolower); // transform upper case string to  lower case
+    cout << s1 << endl;
+
+    sort(s1.begin(), s1.end(), greater<char>()); // sort in decending order 
+    cout << s1 << endl;
+
+    return 0;
+}
